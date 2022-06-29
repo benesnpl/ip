@@ -4,10 +4,10 @@ resource "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_public_ip" "management" {
-  for_each            = var.vmseries
-  name                = "${each.key}-nic-management-pip"
+  name                = "malakas"
   location            = var.resource_location
   resource_group_name = var.resource_group_name
   allocation_method   = "Static"
   sku                 = "Standard"
+  depends_on
 }
