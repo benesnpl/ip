@@ -10,5 +10,5 @@ resource "azurerm_public_ip" "management" {
   allocation_method   = "Static"
   sku                 = "Standard"
   depends_on          = ["azurerm_resource_group.this"]
-  zones               = 0
+  availability_zone   = "No-Zone"
 }
