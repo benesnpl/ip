@@ -9,7 +9,6 @@ resource "azurerm_virtual_network" "this" {
   name                = var.virtual_network_name
   resource_group_name = var.resource_group_name
 
-  depends_on = [azurerm_resource_group.this]
 }
 
 resource "azurerm_subnet" "this" {
